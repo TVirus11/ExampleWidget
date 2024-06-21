@@ -4,7 +4,6 @@ import android.app.AlarmManager
 import android.app.PendingIntent
 import android.appwidget.AppWidgetManager
 import android.appwidget.AppWidgetProvider
-import android.content.ComponentName
 import android.content.Context
 import android.content.Intent
 import android.os.SystemClock
@@ -49,6 +48,5 @@ internal fun updateAppWidget(context: Context, appWidgetManager: AppWidgetManage
     views.setTextViewText(R.id.tvTemperature, "24°C")
     views.setTextViewText(R.id.tvMode, "Auto")
     views.setImageViewResource(R.id.ivMode, R.drawable.ic_mode)
-    views.setBoolean(R.id.switchPower, "setChecked", true)
     appWidgetManager.updateAppWidget(appWidgetId, views)
 }
